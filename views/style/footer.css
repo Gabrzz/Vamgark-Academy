@@ -67,8 +67,8 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .footer-section {
-    margin-bottom: 10px;
+  .footer-logo {
+    margin: auto;
   }
 }
 
