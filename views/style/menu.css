@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+a{
+    text-decoration: none;
+}
+
+input{
+    color: white;
+    width: 100%;
+    padding: 20px 22px;
+    margin: 8px 0;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid white;
+    border-radius: 10px;
+    font-family: "Roboto Slab", serif;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.menu{
+    width: 100vw;
+    height: 100vh;
+    max-height: 100%;
+    background-image: url(../../img/background-menu-desktop.png);
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+img{
+    max-width: 2.5%;
+    margin: 1rem;
+}
+
+.main-elements{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    justify-content: center;
+}
+
+.logo{
+    max-width: 100%;
+}
+
+.logo-small{
+    max-width: 75px;
+}
+
+.font-btn{
+    color: #0D091B;
+    font-family: "Roboto Slab", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.font{
+    font-family: "Roboto Slab", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.font-bold{
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.font-light{
+    font-family: "Roboto Slab", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.f-w{
+    color:white;
+}
+.f-16{
+    font-size: 16px;
+}
+.f-20{
+    font-size: 20px;
+}
+.f-24{
+    font-size: 24px;
+}
+.f-32{
+    font-size: 32px;
+}
+.f-40{
+    font-size: 40px;
+}
+.f-48{
+    font-size: 48px;
+}
+.f-64{
+    font-size: 64px;
+}
+
+.login{
+    margin: auto;
+    max-width: 80%;
+    height: 60vh;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border: solid 4px rgba(255, 255, 255, 0.80);
+    border-radius: 60px;
+    background-color: rgba(0, 0, 0, 0.60);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+    
+}
+
+.politicas{
+    margin: auto;
+    max-width: 90%;
+    height: 100%vh;
+
+    border: solid 2px rgba(255, 255, 255, 0.80);
+    border-radius: 60px;
+    background-color: rgba(0, 0, 0, 0.60);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+}
+
+
+.btn-1{
+    background-color: #90909010;
+    color: #0A58D0;
+
+}
+
+.btn-2{
+    background-color: #0A58D0;
+    color: white;
+}
+
