@@ -1,3 +1,6 @@
+<?php include '../../database/conexao.php' ?>
+<?php include '../../database/verifica_login.php' ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>

@@ -1,3 +1,8 @@
+<?php include '../../database/conexao.php' ?>
+<?php include '../../database/usuario.php' ?>
+<?php include '../../database/verifica_login.php' ?>
+<?php include '../../database/funcoes_votos.php'; ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -48,12 +53,39 @@
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>
-    <div class="welcome">
-        <h1>Vamgark só existe porque você está aqui, Kauan!</h1>
-        <h2>Comece a Explorar!</h2>
-        <h1><i class="fas fa-arrow-down"></i></h1>
-    </div>
 
+    <?php
+    if (isset($_SESSION['usuario_id'])) {
+      // Consulta para obter os dados do usuário
+      $sql = "SELECT * FROM usuario WHERE id_usuario = " . $_SESSION['usuario_id'];
+      $result = $conexao->query($sql);
+
+      if ($result && $result->num_rows > 0) {
+        $dados_usuario = $result->fetch_assoc();
+        $usuario = new Usuario(
+          $dados_usuario['id_usuario'],
+          $dados_usuario['nome'],
+          $dados_usuario['email'],
+          $dados_usuario['senha'],
+          $dados_usuario['pontos'],
+          $dados_usuario['casa_id']
+        );
+
+        echo '<div class="welcome">';
+        echo '<h1>Vamgark só existe porque você está aqui, ' . $usuario->getNome() . '!</h1>'; 
+        echo '<h2>Comece a Explorar!</h2>';
+        echo '<h1><i class="fas fa-arrow-down"></i></h1>';
+        echo '</div>';
+      } else {
+        // Trata o erro da consulta (opcional)
+        echo "Erro na consulta: " . $conexao->error;
+      }
+    } else {
+      // Redireciona para a página de login se o usuário não estiver logado
+      header("Location: ../../login.php"); 
+      exit();
+    }
+    ?>
     <div class="container pure-g">
         <div class="pure-u-1 pure-u-md-4-6 pure-g principais">
             <div class="pure-u-md-1-2 item">
@@ -84,28 +116,28 @@
   <p>Vote na melhor casa e ajude a sua a <a id="dourado" href="#">vencer!</a></p>
   <div class="quiz-buttons">
 
-    <button id="grifinoria" data-votos="60"> 
+    <button id="grifinoria" data-votos="<?php echo calcularPorcentagemVotos($conexao, 'grifinoria'); ?>"> 
       Grifinória
       <div class="barra-progresso barra-progresso-invisivel"> 
         <div class="porcentagem"></div> 
       </div>
     </button>
 
-    <button id="lufa-lufa" data-votos="15">
+    <button id="lufa-lufa" data-votos="<?php echo calcularPorcentagemVotos($conexao, 'lufa-lufa'); ?>">
       Lufa-Lufa
       <div class="barra-progresso barra-progresso-invisivel">
         <div class="porcentagem"></div> 
       </div>
     </button>
 
-    <button id="corvinal" data-votos="20">
+    <button id="corvinal" data-votos="<?php echo calcularPorcentagemVotos($conexao, 'corvinal'); ?>">
       Corvinal
       <div class="barra-progresso barra-progresso-invisivel">
         <div class="porcentagem"></div> 
       </div>
     </button>
 
-    <button id="sonserina" data-votos="5">
+    <button id="sonserina" data-votos="<?php echo calcularPorcentagemVotos($conexao, 'sonserina'); ?>">
       Sonserina
       <div class="barra-progresso barra-progresso-invisivel">
         <div class="porcentagem"></div> 
@@ -137,7 +169,6 @@
     },
       });
     });
-
     const botoes = document.querySelectorAll('.quiz-buttons button');
 
 botoes.forEach(botao => {
@@ -156,8 +187,39 @@ botoes.forEach(botao => {
 
     // Adiciona a classe "clicado" a todos os botões
     botoes.forEach(b => b.classList.add('clicado'));
+
+    // Envia o voto para o servidor via AJAX
+    const casa = botao.id; 
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '../../database/votar.php', true); 
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhr.onload = function () {
+      if (this.status == 200) {
+        console.log(this.responseText);
+        atualizaPorcentagem();
+      }
+    }
+    xhr.send('casa=' + casa); 
   });
 });
+
+function atualizaPorcentagem() {
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', '../../database/obter_votos.php', true); 
+  xhr.onload = function () {
+    if (this.status == 200) {
+      const votos = JSON.parse(this.responseText);
+      for (const casa in votos) {
+        const botao = document.getElementById(casa);
+        if (botao) {
+          botao.dataset.votos = votos[casa];
+          botao.querySelector('.porcentagem').style.width = votos[casa] + '%';
+        }
+      }
+    }
+  }
+  xhr.send();
+}
   </script>
 </body>
 </html>

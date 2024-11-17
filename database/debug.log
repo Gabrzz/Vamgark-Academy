@@ -1,0 +1,111 @@
+Recebido POST para verificação: Array
+(
+    [email] => ckauanx@vamgark.com
+)
+
+Resultado da verificação: 1 rows
+Arquivo processa_login.php acessado com sucesso.
+Recebido POST: Array
+(
+    [email] => ckauanx@vamgark.com
+    [nome] => 
+    [senha] => Kauan123
+)
+
+Processando email: ckauanx@vamgark.com
+Usuário encontrado: Array
+(
+    [id_usuario] => 1
+    [nome] => Kauan
+    [email] => ckauanx@vamgark.com
+    [senha] => Kauan123
+    [pontos] => 0
+    [casa_id] => 
+)
+
+Recebido POST para verificação: Array
+(
+    [email] => ckauanx@vamgark.com
+)
+
+Resultado da verificação: 1 rows
+Arquivo processa_login.php acessado com sucesso.
+Recebido POST: Array
+(
+    [email] => ckauanx@vamgark.com
+    [nome] => 
+    [senha] => Kauan123
+)
+
+Processando email: ckauanx@vamgark.com
+Usuário encontrado: Array
+(
+    [id_usuario] => 1
+    [nome] => Kauan
+    [email] => ckauanx@vamgark.com
+    [senha] => Kauan123
+    [pontos] => 0
+    [casa_id] => 
+)
+
+Recebido POST para verificação: Array
+(
+    [email] => ckauanx@vamgark.com
+)
+
+Resultado da verificação: 1 rows
+Recebido POST para verificação: Array
+(
+    [email] => ckauanx@vamgark.com
+)
+
+Resultado da verificação: 1 rows
+Recebido POST para verificação: Array
+(
+    [email] => ckauanx@vamgark.com
+)
+
+Resultado da verificação: 1 rows
+Recebido POST para verificação: Array
+(
+    [email] => ckaua@vamgark.com
+)
+
+Resultado da verificação: 0 rows
+Recebido POST para verificação: Array
+(
+    [email] => ckauanx@vamgark.com
+)
+
+Resultado da verificação: 1 rows
+Recebido POST para verificação: Array
+(
+    [email] => ckauanx@vamgark.com
+)
+
+Resultado da verificação: 1 rows
+Recebido POST para verificação: Array
+(
+    [email] => ckauanx@vamgark.com
+)
+
+Resultado da verificação: 1 rows
+Arquivo processa_login.php acessado com sucesso.
+Recebido POST: Array
+(
+    [email] => ckauanx@vamgark.com
+    [nome] => 
+    [senha] => Kauan123
+)
+
+Processando email: ckauanx@vamgark.com
+Usuário encontrado: Array
+(
+    [id_usuario] => 1
+    [nome] => Kauan
+    [email] => ckauanx@vamgark.com
+    [senha] => Kauan123
+    [pontos] => 0
+    [casa_id] => 
+)
+
