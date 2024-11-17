@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="../style/header.css">
 
 <header>
+  <a id="topo" href=""></a>
   <div class="topo pure-g">
     <div class="pure-u-1 pure-u-md-1-3">
       <div class="header-left">
@@ -54,7 +55,7 @@
 
   <style>
     .page-indicator{
-      transform: translateX(calc(14.28571428571429% * (<?php echo $pagina_atual - 1; ?>)));
+      transform: translateX(calc(175% * (<?php echo $pagina_atual - 1; ?>)));
     }
   </style>
 </header>

@@ -1,21 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <?php include '../includes/head.php' ?>
-    <link rel="stylesheet" href="style.css">
-    <title>Página Inicial</title> <!-- Nome da Página -->
+  <?php include '../includes/head.php' ?>
+  <link rel="stylesheet" href="style.css">
+  <title>Página Inicial</title>
 </head>
 <body>
-    <?php 
+  <?php 
     $pagina_atual = 1; 
-    include '../includes/header.php' ?>
-    
-    <main>
+    include '../includes/header.php';
+  ?>
 
+  <main>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide pure-g">
+          <div class="metade-1 pure-u-1 pure-u-md-1-3">
+            <img class="simbolo-swiper" src="../../img/christmas.png" alt="Festividades de Natal">
+          </div>
+          <div class="metade-2 pure-u-1 pure-u-md-2-3">
+            <h1>Festividades de Natal!</h1>
+            <p>🎄✨ O Grande Salão está todo decorado! Junte-se a nós na Vamgark para celebrar o Natal com magia, música e deliciosas iguarias. Venha criar memórias inesquecíveis em uma noite repleta de encantos e surpresas! 🧙‍♂️🎁</p>
+          </div>
+        </div>
 
+        <div class="swiper-slide pure-g">
+          <div class="metade-1 pure-u-1 pure-u-md-1-3">
+            <img class="simbolo-swiper" src="../../img/potion.png" alt="Poções Mágicas"> 
+          </div>
+          <div class="metade-2 pure-u-1 pure-u-md-2-3">
+            <h1>Poções Mágicas</h1>
+            <p>⚗️ Aprenda a preparar poções incríveis como a Felix Felicis e o Elixir da Vida! Domine a arte da poção com nossos mestres e descubra os segredos por trás de cada ingrediente. 🧪✨</p>
+          </div>
+        </div>
 
-    </main>
+        <div class="swiper-slide pure-g">
+          <div class="metade-1 pure-u-1 pure-u-md-1-3">
+            <img class="simbolo-swiper" src="../../img/quadribol.png" alt="Quadribol"> 
+          </div>
+          <div class="metade-2 pure-u-1 pure-u-md-2-3">
+            <h1>Quadribol</h1>
+            <p> 🧹💨 Voe alto com a Vamgark! Junte-se ao nosso time de Quadribol e vivencie a emoção do esporte bruxo mais famoso. Treine suas habilidades, marque gols e conquiste a taça das casas! 🏆</p>
+          </div>
+        </div>
+      </div>
 
-    <?php include '../includes/footer.php' ?>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    <div class="welcome">
+        <h1>Vamgark só existe porque você está aqui, Kauan!</h1>
+        <h2>Comece a Explorar!</h2>
+        <h1><i class="fas fa-arrow-down"></i></h1>
+    </div>
+
+    <div class="container pure-g">
+        <div class="pure-u-1 pure-u-md-4-6 pure-g principais">
+            <div class="pure-u-md-1-2 item">
+                <div class="item-titulo">COMECE A ESTUDAR</div>
+                <img src="../../img/livros.png" alt="">
+                <p>Os cursos da <a id="dourado" href="#">Vamgark</a> são ricos em conteúdos precisos e são renovados todos os anos, <a id="dourado" href="#">comece já!</a></p>
+            </div>
+            <div class="pure-u-md-1-2 item">
+                <div class="item-titulo">OFERTAS IMPERDÍVEIS</div>
+                <img src="../../img/varinha.png" alt="">
+                <p>Nossa Loja está receada de novidades quentinhas, <a id="dourado" href="#">venha conferir!</a></p>
+            </div>
+            <div class="pure-u-md-1-2 item">
+                <div class="item-titulo">AGENDE UMA VISITA</div>
+                <img src="../../img/loja.png" alt="">
+                <p>Estamos abertos para visitação em <a id="dourado" href="#">várias</a> épocas do ano, com incriveis <a id="dourado" href="#">oficinas interativas!</a></p>
+            </div>
+            <div class="pure-u-md-1-2 item">
+                <div class="item-titulo">O QUE ESTÃO FALANDO</div>
+                <div class="posts"><h1><a id="dourado" href="#">+137</a> POSTS</h1>
+                <h5>Na última hora!</h5></div>
+                <p>Você sabia que em <a id="dourado" href="#">Vamgark</a> há uma comunidade ativa <a id="dourado" href="#">livre de filtros e censura</a> promovendo o pensamento de nossos alunos? <a id="dourado" href="#">Seja um deles!</a></p>
+            </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-2-6 quiz-container">
+        <div class="quiz-item">
+  <h1>Enquete!</h1>
+  <p>Vote na melhor casa e ajude a sua a <a id="dourado" href="#">vencer!</a></p>
+  <div class="quiz-buttons">
+
+    <button id="grifinoria" data-votos="60"> 
+      Grifinória
+      <div class="barra-progresso barra-progresso-invisivel"> 
+        <div class="porcentagem"></div> 
+      </div>
+    </button>
+
+    <button id="lufa-lufa" data-votos="15">
+      Lufa-Lufa
+      <div class="barra-progresso barra-progresso-invisivel">
+        <div class="porcentagem"></div> 
+      </div>
+    </button>
+
+    <button id="corvinal" data-votos="20">
+      Corvinal
+      <div class="barra-progresso barra-progresso-invisivel">
+        <div class="porcentagem"></div> 
+      </div>
+    </button>
+
+    <button id="sonserina" data-votos="5">
+      Sonserina
+      <div class="barra-progresso barra-progresso-invisivel">
+        <div class="porcentagem"></div> 
+      </div>
+    </button>
+
+  </div>
+</div>
+    </div>
+
+  </main>
+
+  <?php include '../includes/footer.php' ?>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const swiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+          
+        },
+        autoplay: {
+      delay: 3000, // Tempo de espera entre os slides em milissegundos
+      disableOnInteraction: false, // Continua o autoplay mesmo após a interação do usuário
+    },
+      });
+    });
+
+    const botoes = document.querySelectorAll('.quiz-buttons button');
+
+botoes.forEach(botao => {
+  botao.addEventListener('click', () => {
+    // Desabilita todos os botões
+    botoes.forEach(b => b.disabled = true);
+
+    // Mostra e anima as barras de progresso
+    const barras = document.querySelectorAll('.barra-progresso');
+    barras.forEach(barra => {
+      barra.style.display = 'block';
+      setTimeout(() => {
+        barra.style.width = barra.parentElement.dataset.votos + '%';
+      }, 100); 
+    });
+
+    // Adiciona a classe "clicado" a todos os botões
+    botoes.forEach(b => b.classList.add('clicado'));
+  });
+});
+  </script>
 </body>
 </html>

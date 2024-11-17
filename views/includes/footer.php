@@ -18,7 +18,7 @@
       </div>
       <div class="pure-u-1 pure-u-md-1-4 footer-section">
         <ul>
-          <li><a href="#">Voltar ao Topo ↑</a></li>
+        <li><a href="#topo" id="voltar-ao-topo">Voltar ao Topo ↑</a></li>
         </ul>
       </div>
       <div class="pure-u-1 footer-bottom">
@@ -28,3 +28,11 @@
     <img src="../../img/logo-vamgark-whitefull.png" alt="Logo Vamgark Academy" class="footer-logo">
   </div>
 </footer>
+<script>
+  document.getElementById('voltar-ao-topo').addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' 
+  });
+});
+</script>

@@ -2,6 +2,9 @@ html, body {
   height: 100%;
   margin: 0;
 }
+html {
+  scroll-behavior: smooth; /* Torna a rolagem suave em todo o site */
+}
 
 body {
   display: flex;
