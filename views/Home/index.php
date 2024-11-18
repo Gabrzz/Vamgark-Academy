@@ -147,6 +147,32 @@
   </div>
 </div>
     </div>
+    </div>
+    <div class="pure-g container">
+    <div class="centralizado pure-g pure-u-1 pure-u-md-1-2">
+      <div class="barrinha"></div>
+      <div class="pure-u-1-4 flag">
+        <img src="../../img/grifinoria-flag.png" alt="">
+        <h1>1º  <a id="dourado">650pts</a></h1>
+      </div>
+      <div class="pure-u-1-4 flag">
+        <img src="../../img/corvinal-flag.png" alt="">
+        <h1>3º  <a id="dourado">365pts</a></h1>
+      </div>
+      <div class="pure-u-1-4 flag">
+        <img src="../../img/lufalufa-flag.png" alt="">
+        <h1>2º  <a id="dourado">520pts</a></h1>
+      </div>
+      <div class="pure-u-1-4 flag">
+        <img src="../../img/sonserina-flag.png" alt="">
+        <h1>4º  <a id="dourado">105pts</a></h1>
+      </div>
+    </div>
+    <div class="pontuacao pure-u-1 pure-u-md-1-2">
+        <h1><a id="dourado">Pontuação Geral </a>das casas em tempo real!</h1>
+        <button class="suacasa">Sua Casa</button>
+    </div>
+    </div>
 
   </main>
 

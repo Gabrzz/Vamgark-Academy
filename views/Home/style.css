@@ -1,16 +1,3 @@
-@font-face {
-    font-family: 'Roboto Slab';
-    src: url('fonts/RobotoSlab-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Roboto Slab';
-    src: url('fonts/RobotoSlab-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-  }
 
 main{
     font-family: 'Roboto Slab', serif;
@@ -74,7 +61,7 @@ main{
     flex-wrap: wrap;
     flex-direction: column;
 }
-.welcome h1{
+h1{
     color: white;
     margin-bottom: 0;
 }
@@ -289,6 +276,63 @@ main{
     transform: none;
     box-shadow: none;
   }
+
+.centralizado{
+  padding: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.centralizado h1{
+  font-size: 25px;
+}
+.suacasa{
+  background-color: #0A58D0;
+  border: 3px solid #39344D;
+  padding: 20px;
+  color: white;
+  border-radius: 50px;
+  margin-top: 30px;
+  width: 160px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.pontuacao{
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.barrinha{
+  width: 600px;
+  height: 0px;
+  border: 2px solid #39344D;
+  position: absolute;
+  margin-top: -142px;
+}
+.centralizado img{
+  width: 70px;
+}
+.flag{
+  display: flex;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+    font-size: 20px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.centralizado #dourado{
+  font-size: smaller;
+}
+
 @media (max-width: 768px) {
     .menu-toggle {
       display: block;
