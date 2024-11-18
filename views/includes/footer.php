@@ -5,15 +5,15 @@
     <div class="pure-u-1 pure-u-md-5-8">
       <div class="pure-u-1 pure-u-md-1-3 footer-section">
         <ul>
-          <li><a href="#">FAQs</a></li>
-          <li><a href="#">Termos & Condições</a></li>
-          <li><a href="#">Política de Privacidade da Criança</a></li>
+          <li><a href="../Extras/faq.php">FAQs</a></li>
+          <li><a href="../Extras/termos.php">Termos & Condições</a></li>
+          <li><a href="../Extras/privacy.php">Política de Privacidade da Criança</a></li>
         </ul>
       </div>
       <div class="pure-u-1 pure-u-md-1-3 footer-section">
         <ul>
-          <li><a href="#">Quem somos nós?</a></li>
-          <li><a href="#">Certificações</a></li>
+          <li><a href="../Extras/quem-somos.php">Quem somos nós?</a></li>
+          <li><a href="../Extras/certificacoes.php">Certificações</a></li>
         </ul>
       </div>
       <div class="pure-u-1 pure-u-md-1-4 footer-section">
