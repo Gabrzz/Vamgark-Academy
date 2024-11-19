@@ -1,5 +1,5 @@
-<?php include '../../database/conexao.php' ?>
-<?php include '../../database/verifica_login.php' ?>
+<?php include '../../models/conexao.php' ?>
+<?php include '../../models/verifica_login.php' ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
