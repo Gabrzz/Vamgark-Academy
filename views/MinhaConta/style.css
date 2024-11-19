@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Jim+Nightshade&display=swap');
+
+
+.indicator{
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    z-index: 10;
+    text-align: center;
+    background-color: #39344C;
+    margin: auto;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-image{
+    margin-top: 15vh;
+}
+
+.profile-image-img{
+    border-radius: 49.6%;
+    border: solid white 2px;
+    width: 20vw;
+}
+
+.background{
+    background-image: url(../../img/profile-background.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100vw;
+    margin-bottom: 10vh;
+}
+
+.info{
+    border: solid white 4px;
+    border-radius: 60px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.f-lema {
+    font-family: "Jim Nightshade", cursive;
+    font-weight: 49.60;
+    font-style: normal;
+}
+
+.btn-outline-light:hover{
+    background-color: rgba(255, 255, 255, 0.158);
+}
+
+.divisor{
+    border: dashed white 1px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.losango-topo, .losango-baixo {
+    width: 5px; /* Largura do losango */
+    height: 5px; /* Altura do losango */
+    background-color: white; /* Cor do losango */
+    transform: rotate(45deg); /* Gira o losango */
+    position: absolute; /* Posicionamento absoluto */
+  }
+  
+  .losango-topo {
+    top: 0; /* Posiciona no topo da linha */
+    left: 49.7%; /* Ajusta a posição horizontal */
+  }
+  
+  .losango-baixo {
+    bottom: 0; /* Posiciona na base da linha */
+    left: 49.7%; /* Ajusta a posição horizontal */
+  }
+  
+
+  .insignias{
+    border: white 2px solid;
+    border-radius: 50px;
+    width:38vw; 
+    height:fit-content;
+  }
+
+  .insignias-tittle{
+    border-radius: 8px;
+    background-color: white;
+    width: fit-content;
+    padding: 2px 20px;
+    position: static;
+    margin: auto;
+    margin-top: -15px;
+  }
+
+  .insignia{
+    height: 70px;
+    width: 70px;
+    background-color: white;
+    border-radius: 50%;
+    
+  }
+
+  .composition{
+    height: 75px;
+    width: 75px;
+    background-color: white;
+  }

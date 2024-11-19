@@ -1,7 +1,13 @@
-<?php include '../../database/conexao.php' ?>
-<?php include '../../database/usuario.php' ?>
-<?php include '../../database/verifica_login.php' ?>
-<?php include '../../database/funcoes_votos.php'; ?>
+<?php 
+include '../../controller/UsuarioController.php';
+include '../../models/verifica_login.php';
+include '../../models/funcoes_votos.php'; 
+
+if (isset($_SESSION['usuario_id'])){
+  $UsuarioController = new UsuarioController();
+  $usuario = $UsuarioController->findId($_SESSION['usuario_id']);
+} 
+?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -54,38 +60,14 @@
       <div class="swiper-button-next"></div>
     </div>
 
-    <?php
-    if (isset($_SESSION['usuario_id'])) {
-      // Consulta para obter os dados do usuário
-      $sql = "SELECT * FROM usuario WHERE id_usuario = " . $_SESSION['usuario_id'];
-      $result = $conexao->query($sql);
+    <div class="welcome">';
+      <h1>Vamgark só existe porque você está aqui, <?php echo $usuario->getNome()?>!</h1>'; 
+      <h2>Comece a Explorar!</h2>';
+      <h1><i class="fas fa-arrow-down"></i></h1>';
+    </div>';
 
-      if ($result && $result->num_rows > 0) {
-        $dados_usuario = $result->fetch_assoc();
-        $usuario = new Usuario(
-          $dados_usuario['id_usuario'],
-          $dados_usuario['nome'],
-          $dados_usuario['email'],
-          $dados_usuario['senha'],
-          $dados_usuario['pontos'],
-          $dados_usuario['casa_id']
-        );
 
-        echo '<div class="welcome">';
-        echo '<h1>Vamgark só existe porque você está aqui, ' . $usuario->getNome() . '!</h1>'; 
-        echo '<h2>Comece a Explorar!</h2>';
-        echo '<h1><i class="fas fa-arrow-down"></i></h1>';
-        echo '</div>';
-      } else {
-        // Trata o erro da consulta (opcional)
-        echo "Erro na consulta: " . $conexao->error;
-      }
-    } else {
-      // Redireciona para a página de login se o usuário não estiver logado
-      header("Location: ../../login.php"); 
-      exit();
-    }
-    ?>
+      
     <div class="container pure-g">
         <div class="pure-u-1 pure-u-md-4-6 pure-g principais">
             <div class="pure-u-md-1-2 item">
@@ -196,6 +178,7 @@
       });
     });
     const botoes = document.querySelectorAll('.quiz-buttons button');
+    
 
 botoes.forEach(botao => {
   botao.addEventListener('click', () => {
@@ -217,7 +200,7 @@ botoes.forEach(botao => {
     // Envia o voto para o servidor via AJAX
     const casa = botao.id; 
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', '../../database/votar.php', true); 
+    xhr.open('POST', '../../models/votar.php', true); 
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.onload = function () {
       if (this.status == 200) {
@@ -231,7 +214,7 @@ botoes.forEach(botao => {
 
 function atualizaPorcentagem() {
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', '../../database/obter_votos.php', true); 
+  xhr.open('GET', '../../models/obtervotos.php', true); 
   xhr.onload = function () {
     if (this.status == 200) {
       const votos = JSON.parse(this.responseText);
@@ -247,5 +230,7 @@ function atualizaPorcentagem() {
   xhr.send();
 }
   </script>
+
+  
 </body>
 </html>

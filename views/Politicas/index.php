@@ -12,12 +12,12 @@
 
 <body class="menu">
 
-    <div         class="politicas d-flex flex-column p-5">
+    <div class="politicas d-flex flex-column p-5">
         <div class="text-center">
             <span class="font-bold f-w f-32">Políticas de Login da Vamgark Academy</span>
         </div>
         <div class="m-3">
-            <span class="f-24 font f-w">Bem-vindo à Vamgark Academy, onde a magia e o aprendizado andam de mãos dadas! Antes de acessar nosso
+            <span class="f-16 font f-w">Bem-vindo à Vamgark Academy, onde a magia e o aprendizado andam de mãos dadas! Antes de acessar nosso
                 site, pedimos que você leia atentamente as políticas de login a seguir: </br></br>
 
                 1. Endereço de E-mail Exclusivo: Para garantir a segurança e a integridade da nossa comunidade mágica, o
